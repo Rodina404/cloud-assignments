@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Who I am</title>
+    <style>
+        :root{
+            --bg:#f3f7fb;
+            --card:#ffffff;
+            --accent:#2b7cff;
+            --muted:#6b7280;
+            --maxw:420px;
+            --avatar-size:160px;
+            --pad:28px;
+        }
+        html,body{
+            height:100%;
+            margin:0;
+            font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+            background:linear-gradient(180deg, var(--bg), #ffffff);
+            color:#111827;
+        }
+        .page {
+            min-height:100%;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            padding:40px 16px;
+        }
+        .card {
+            width:100%;
+            max-width:var(--maxw);
+            background:var(--card);
+            border-radius:14px;
+            box-shadow:0 8px 30px rgba(15,23,42,0.08);
+            padding:calc(var(--pad) + 6px);
+            text-align:center;
+        }
+        .avatar {
+            width:var(--avatar-size);
+            height:var(--avatar-size);
+            border-radius:50%;
+            object-fit:cover;
+            display:block;
+            margin:0 auto 18px;
+            border:6px solid rgba(43,124,255,0.12);
+            box-shadow:0 6px 20px rgba(43,124,255,0.08);
+            background:linear-gradient(135deg, #eef6ff, #ffffff);
+        }
+        h1{
+            margin:0 0 6px;
+            font-size:1.35rem;
+            letter-spacing:0.2px;
+        }
+        .meta {
+            color:var(--muted);
+            margin:0 0 18px;
+            font-size:0.95rem;
+        }
+        .section {
+            text-align:left;
+            margin-top:8px;
+        }
+        .section h3{
+            margin:0 0 8px;
+            font-size:0.95rem;
+            color:#0f172a;
+        }
+        ul {
+            margin:0;
+            padding-left:18px;
+            color:var(--muted);
+        }
+        li{
+            margin:6px 0;
+            line-height:1.35;
+        }
+        .footer-note{
+            margin-top:18px;
+            font-size:0.85rem;
+            color:var(--muted);
+        }
+
+        /* responsive smaller avatar */
+        @media (max-width:360px){
+            :root{ --avatar-size:120px; --maxw:340px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <main class="card" role="main" aria-labelledby="name">
+            <img class="avatar" src="https://tse1.mm.bing.net/th/id/OIP.fGjQWs1pJdY2VDA3jRw5JQHaEK?w=633&h=356&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Profile photo" />
+            <h1 id="name">Rodina Mohamed</h1>
+            <p class="meta">Age: 23 &nbsp;|&nbsp; University: Alamein International University</p>
+
+            <section class="section" aria-labelledby="courses">
+                <h3 id="courses">Courses I took</h3>
+                <ul>
+                    <li>Web Development — Building responsive websites with HTML, CSS and JavaScript; covers DOM, accessibility, and basic front-end & backend concepts.</li>
+                    <li>NLP — Techniques to process and understand text: tokenization, embeddings, classification, and sequence models (e.g., Transformers); applied to sentiment analysis, NER, and summarization.</li>
+                    <li>Cloud computing — Running applications and storage on remote infrastructure; includes IaaS/PaaS/SaaS, containers, orchestration (Kubernetes), and deployment/CI-CD for scalability.</li>
+                </ul>
+            </section>
+
+            <section class="section" aria-labelledby="hobbies">
+                <h3 id="hobbies">Hobbies</h3>
+                <ul>
+                    <li>Coding side projects</li>
+                    <li>Reading</li>
+                    <li>Watching Netflix</li>
+                </ul>
+            </section>
+
+        </main>
+    </div>
+</body>
+</html>
